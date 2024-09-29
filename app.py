@@ -10,7 +10,7 @@ def main():
     load_dotenv()
 
     st.set_page_config(page_title="Resume Screening Assistance")
-    st.title("HR - Resume Screening Assistance...💁 ")
+    st.title("HR - Assistant by Bitan⚡")
     st.subheader("I can help you in resume screening process")
 
     job_description = st.text_area("Please paste the 'JOB DESCRIPTION' here...", key="1")
