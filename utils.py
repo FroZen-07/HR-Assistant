@@ -39,7 +39,7 @@ def similar_docs(query, k, vector_store, unique_id):
     return relevant_docs  # This now returns a list of (document, score) tuples
 
 def get_summary(current_doc):
-    llm = HuggingFaceHub(repo_id="bigscience/bloom", model_kwargs={"temperature": 1e-10})
+    llm = HuggingFaceHub(repo_id="facebook/bart-large-cnn", model_kwargs={"temperature": 1e-10})
     chain = load_summarize_chain(llm, chain_type="map_reduce")
     summary = chain.run([current_doc])
     return summary
